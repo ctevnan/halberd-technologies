@@ -24,3 +24,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //override with the x-http-method-override header in request. simulate DEL/PUT
 app.use(methodOverride('x-http-method-override'));
+
+//set static files location /public/img will be /img for users
+app.use(express.static(__dirname + '/public'));
+
+//routes
+
+require('./app/routes')(app); //config routes
+
+//start app at localhost:8080
+app.listen(port);
+
+console.log('Listening on port ' + port);
+
+//expose app
+exports = module.exports = app;
