@@ -1,16 +1,17 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var logger = require('morgan');
 var methodOverride = require('method-override');
 
 //config
-var db = require('./config/db');
+var db = require('./config/connection.js');
 
 //set port
 var port = process.env.PORT || 8080;
 
 //connect to mongoDB
-//mongoose.connect(db.url);
+mongoose.connect(db.url);
 
 //get all data/ of the body(POST) params
 //parse app/json
@@ -29,8 +30,8 @@ app.use(methodOverride('x-http-method-override'));
 app.use(express.static(__dirname + '/public'));
 
 //routes
-
-require('./app/routes')(app); //config routes
+var routes = require('./controllers/router.js');
+app.use('/', routes);
 
 //start app at localhost:8080
 app.listen(port);
