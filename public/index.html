@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Halberd Technologies LLC</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="release/css/ui-navbar.css">
   </head>
   <body>
   <div ng-controller="NavigationController">
@@ -21,10 +22,61 @@
           Halberd Technologies LLC
         </a>
       </div>
+      <!--collect nav links for toggling -->
+      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+
+        <ul class="nav navbar-nav">
+          <li uib-dropdown>
+            <a href="#" uib-dropdown-toggle>
+              Dropdown
+              <b class='caret'></b>
+            </a>
+            <tree tree='tree'></tree>
+          </li>
+          <li uib-dropdown>
+            <a href="#" uib-dropdown-toggle>
+              Just a clone
+              <span class='caret'></span>
+            </a>
+            <tree tree='tree'></tree>
+          </li>
+        </ul>  
+        <ul class="nav navbar-nav navbar-right">
+          <li uib-dropdown>
+            <a href="#" uib-dropdown-toggle>
+              Dropdown right
+              <b class='caret'></b>
+            </a>
+            <tree tree='tree'></tree>
+          </li>
+          <li uib-dropdown>
+            <a href="#" uib-dropdown-toggle>
+              Just a clone right
+              <span class='caret'></span>
+            </a>
+            <tree tree='tree'></tree>
+          </li>
+        </ul>                      
+      </div>
+      <!-- /.navbar-collapse -->
     </nav>
-  </div>  
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+  </div>
+
+  <div ui-view></div>
+  
+  <!-- angularjs -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+
+  <!--angularjs modules -->
+  <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+  <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+  
+
+  <!--ui-navbar script -->
+  <script src="../release/js/ui-navbar.min.js"></script>
+
+  <!--app script -->
   <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
