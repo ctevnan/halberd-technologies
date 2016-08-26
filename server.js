@@ -8,6 +8,8 @@ var passport = require('passport');
 var logger = require('morgan');
 var methodOverride = require('method-override');
 var server = require('http').Server(app);
+var connect = require('connect');
+var serveStatic = require('serve-static');
 
 //set port
 var PORT = process.env.PORT || 3000;
@@ -29,6 +31,9 @@ mongoose.connect(db, function(err){
 /*mongoose.connect(db.url);*/
 
 //MIDDLEWARE
+//for nav
+app.use(serveStatic('./'));
+app.use(serveStatic('../'));
 //get all data/ of the body(POST) params
 //parse app/json
 /*app.use(bodyParser.json());
