@@ -2,7 +2,7 @@
 
 angular.module('App', ['ui.bootstrap', 'ui.router', 'ui-navbar'])
 
-  .config(function($stateProvider, $urlRouterProvider)) {
+  .config(function($stateProvider, $urlRouterProvider) {
 
     //for any unmatched url, redirect to /state1
     $urlRouterProvider.otherwise("/home");
