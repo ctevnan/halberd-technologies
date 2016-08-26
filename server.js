@@ -10,6 +10,10 @@ var methodOverride = require('method-override');
 var server = require('http').Server(app);
 var connect = require('connect');
 var serveStatic = require('serve-static');
+var angular = require('angular');
+var angular-ui-bootstrap = require('angular-ui-bootstrap');
+var angular-ui-router = require('angular-ui-router');
+var bootstrap = require('bootstrap');
 
 //set port
 var PORT = process.env.PORT || 3000;
