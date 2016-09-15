@@ -6,37 +6,7 @@
     <title>Halberd Technologies LLC</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="release/css/ui-navbar.css">
-    <script type="text/javascript">
-      var app = angular.module('App',[]);
-      app.controller('ctrl', function($scope){
-        $scope.links =[
-        { src:"http://blog.casro.net/wp-content/uploads/2016/02/tech.jpg", alt:"", caption:""},
-        { src:"http://imgsplanet.com/pics/main/27/305520-digital.jpg", alt:"", caption:""},
-        { src:"http://pic2.sc.chinaz.com/files/pic/pic9/201208/xpic6815.jpg", alt:"", caption:""}
-      ];
-    });
-    app.directive('carousel', function($timeout) {
-      return {
-        restrict: 'E',
-        scope: {
-          links: '='
-        },
-        templateUrl: 'carousel.html',
-        link: function(scope, element) {
-          $timeout(function() {
-            $('.carousel-indicators li', element).first().addClass('active');
-            $('.carousel-inner .item', element).first().addClass('active');
-          });
-        }
-      }
-    });
-  </script>    
-  </head>
-  <body ng-controller="ctrl">
-    <div style="width:800px; height: 400px">
-      <carousel links="links"></carousel>
-    </div>
-  </body>    
+  </head>   
   <div ng-controller="NavigationController">
     <nav class="navbar navbar-inverse" role="navigation">
       <div class="navbar-header">
