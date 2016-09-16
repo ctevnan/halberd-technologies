@@ -61,8 +61,26 @@
       <!-- /.navbar-collapse -->
     </nav>
   </div>
+  <div ng-app="app">
+    <div ng-controller="CarouselCtrl" id="slides_control">
+      <div>
+        <carousel interval="carInterval">
+          <slide ng-repeat="slide in slides" active="slide.active">
+            <img ng-src="{{slide.image}}">
+            <div class="carousel-caption">
+              <h4> Slide {{$index+1}}</h4>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+    </div>
+  </div>            
 
   <div ui-view></div>
+
+  <!-- carousel -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins, carousel) -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
