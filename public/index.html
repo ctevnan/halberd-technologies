@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="App">
+<html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,41 +61,37 @@
       <!-- /.navbar-collapse -->
     </nav>
   </div>
-  <div ng-app="app">
-    <div ng-controller="CarouselCtrl" id="slides_control">
-      <div>
-        <carousel interval="carInterval">
-          <slide ng-repeat="slide in slides" active="slide.active">
-            <img ng-src="{{slide.image}}">
-            <div class="carousel-caption">
-              <h4> Slide {{$index+1}}</h4>
-            </div>
-          </slide>
-        </carousel>
-      </div>
-    </div>
-  </div>            
-
-  <div ui-view></div>
-
-  <!-- carousel -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins, carousel) -->
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
-  <!-- Latest compiled and minified JavaScript for carousel-->
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   
+  <div ui-view>
+    <div ng-app="app">
+      <div ng-controller="carouselCtrl" id="slides_control">
+        <div>
+          <carousel interval="carInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+              <img ng-src="{{slide.image}}">
+                <div class="carousel-caption">
+                  <h4> Slide {{$index+1}}</h4>
+                </div>
+            </slide>
+          </carousel>
+        </div>
+      </div>
+    </div>             
+  </div>
+
   <!-- angularjs -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
 
   <!--angularjs modules -->
   <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
   <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
   
+  <!-- carousel -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins, carousel) -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
   <!--ui-navbar script -->
   <script src="../release/js/ui-navbar.min.js"></script>
