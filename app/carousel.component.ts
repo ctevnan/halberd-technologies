@@ -94,8 +94,8 @@ export class CSSCarouselComponent {
 //IMAGES array implementing Image interface
 var IMAGES: Image[] = [
   { "title": "You are covered", "url": "https://thumbs.dreamstime.com/t/eye-technology-background-human-design-cyberspace-concept-35581913.jpg" },
-  { "title": "Computer ID", "url": "http://www.spyderonlines.com/images/wallpapers/computer-picture-wallpaper/computer-picture-wallpaper-19.jpg" },
-  { "title": "Identity", "url": "https://fcw.com/Articles/List/~/media/GIG/FCWNow/Topics/Identity/digital_fingerprint_0.jpg" },
-  { "title": "Fingerprinted", "url": "https://highstreetclouddivision.files.wordpress.com/2014/01/fingerprint.jpg" },
+  { "title": "Identification", "url": "http://www.spyderonlines.com/images/wallpapers/computer-picture-wallpaper/computer-picture-wallpaper-19.jpg" },
+  { "title": "Connection", "url": "http://allthingsitsm.com/wp-content/uploads/2016/09/bigstock-141889139-300x200.jpg" },
+  { "title": "Communication", "url": "http://www.newsstrategies.com/wp-content/uploads/2012/12/business_communication-500x294.jpg" },
   { "title": "Fingerprint Scan", "url": "http://media.gettyimages.com/videos/fingerprint-scan-access-denied-video-id483176930?s=640x640" }  
 ];
