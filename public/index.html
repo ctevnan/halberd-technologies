@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Halberd Technologies LLC</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="release/css/ui-navbar.css">
-  </head>   
+    <link rel="stylesheet" href="release/css/ui-navbar.css"> 
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js"></script>
+    
+    <script src="https://code.angularjs.org/2.0.0-beta.2/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.2/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.2/angular2.dev.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        transpiler: 'typescript', 
+        typescriptOptions: { emitDecoratorMetadata: true }, 
+        packages: {'app': {defaultExtension: 'ts'}} 
+      });
+      System.import('app/boot')
+            .then(null, console.error.bind(console));
+    </script>  
+  </head> 
   <div ng-controller="NavigationController">
     <nav class="navbar navbar-inverse" role="navigation">
       <div class="navbar-header">
@@ -14,14 +35,13 @@
             ng-click="navCollapsed = !navCollapsed">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>  
         <a class="navbar-brand" ui-sref="home">
           Halberd Technologies LLC
         </a>
       </div>
-      <!--collect nav links for toggling -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>        <!--collect nav links for toggling -->
       <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
         <!--navbar links to the left -->
         <ul class="nav navbar-nav">
@@ -61,23 +81,9 @@
       <!-- /.navbar-collapse -->
     </nav>
   </div>
-  
-  <div ui-view>
-    <div ng-app="app">
-      <div ng-controller="carouselCtrl" id="slides_control">
-        <div>
-          <carousel interval="carInterval">
-            <slide ng-repeat="slide in slides" active="slide.active">
-              <img ng-src="{{slide.image}}">
-                <div class="carousel-caption">
-                  <h4> Slide {{$index+1}}</h4>
-                </div>
-            </slide>
-          </carousel>
-        </div>
-      </div>
-    </div>             
-  </div>
+  <body>
+    <my-app>Loading...</my-app> 
+  </body>  
 
   <!-- angularjs -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
@@ -88,7 +94,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
   
   <!-- carousel -->
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+  
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins, carousel) -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
