@@ -93,9 +93,9 @@ export class CSSCarouselComponent {
 
 //IMAGES array implementing Image interface
 var IMAGES: Image[] = [
-  { "title": "You are covered", "url": "https://thumbs.dreamstime.com/t/eye-technology-background-human-design-cyberspace-concept-35581913.jpg" },
-  { "title": "Identification", "url": "http://www.spyderonlines.com/images/wallpapers/computer-picture-wallpaper/computer-picture-wallpaper-19.jpg" },
-  { "title": "Connection", "url": "http://allthingsitsm.com/wp-content/uploads/2016/09/bigstock-141889139-300x200.jpg" },
-  { "title": "Communication", "url": "http://www.newsstrategies.com/wp-content/uploads/2012/12/business_communication-500x294.jpg" },
-  { "title": "Fingerprint Scan", "url": "http://media.gettyimages.com/videos/fingerprint-scan-access-denied-video-id483176930?s=640x640" }  
+  { "title": "Reliable", "url": "./public/assets/img/business-people-background.jpg" },
+  { "title": "Polished", "url": "./public/assets/img/development.jpg" },
+  { "title": "Connection", "url": "./public/assets/img/eye-tech.jpg" },
+  { "title": "Communication", "url": "./public/assets/img/happy_customers.jpg" },
+  { "title": "Identification", "url": "./public/assets/img/identify.png" }  
 ];
