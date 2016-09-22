@@ -6,7 +6,7 @@
     <title>Halberd Technologies LLC</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="release/css/ui-navbar.css"> 
-    <!-- 1. Load libraries -->
+    <!-- 1. Load libraries for carousel-->
     <!-- IE required polyfills, in this exact order -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js"></script>
@@ -82,27 +82,26 @@
     </nav>
   </div>
   <body>
-    <my-app>Loading...</my-app> 
-  </body>  
-
-  <!-- angularjs -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
-
-  <!--angularjs modules -->
-  <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
-  <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+    <app>Loading...</app> 
   
-  <!-- carousel -->
+    <script src="vendor.bundle.js"></script>
+    <script src="bundle.js"></script>  
+
+    <!-- angularjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+
+    <!--angularjs modules -->
+    <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins, carousel) -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins, carousel) -->
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!--ui-navbar script -->
+    <script src="../release/js/ui-navbar.min.js"></script>
 
-  <!--ui-navbar script -->
-  <script src="../release/js/ui-navbar.min.js"></script>
-
-  <!--app script -->
-  <script type="text/javascript" src="/public/assets/js/app.js"></script>
+    <!--app script -->
+    <script type="text/javascript" src="/public/assets/js/app.js"></script>
   </body>
 </html>

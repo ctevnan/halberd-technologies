@@ -7,7 +7,7 @@ import {CSSCarouselComponent} from './carousel.component';
 //@Component decorator
 @Component({
   //tag
-  selector: 'my-app',
+  selector: 'app',
   //template
   template: `
   <div class="wrapper">

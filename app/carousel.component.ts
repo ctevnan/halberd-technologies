@@ -1,10 +1,10 @@
 //Import Component form the angular core package
 import {Component} from 'angular2/core';
 
-//Importt the Image interface
+//Import the Image interface
 import {Image} from './image.interface';
 
-//Compoent Decorator
+//Component Decorator
 @Component({
   //Name of our tag
   selector: 'css-carousel',
