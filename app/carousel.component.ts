@@ -93,7 +93,7 @@ export class CSSCarouselComponent {
 
 //IMAGES array implementing Image interface
 var IMAGES: Image[] = [
-  { "title": "Reliable", "url": "./public/assets/img/business-people-background.jpg" },
+  { "title": "Reliable", "url": "./public/assets/img/addhand.jpg" },
   { "title": "Polished", "url": "./public/assets/img/development.jpg" },
   { "title": "Connection", "url": "./public/assets/img/eye-tech.jpg" },
   { "title": "Communication", "url": "./public/assets/img/happy_customers.jpg" },
